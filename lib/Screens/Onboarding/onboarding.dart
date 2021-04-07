@@ -1,4 +1,5 @@
 import 'package:beacon/Controllers/onboardingController.dart';
+import 'package:beacon/Screens/Signin/signin.dart';
 import 'package:beacon/Widgets/onboardingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,6 +33,7 @@ class Onboarding extends StatelessWidget {
               description:
                   'Just enjoy the trip and let beacon\napp manage the things for you',
             ),
+            SigninPage(),
           ],
         ),
       ),
