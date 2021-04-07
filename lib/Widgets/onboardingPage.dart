@@ -1,4 +1,5 @@
 import 'package:beacon/Controllers/onboardingController.dart';
+import 'package:beacon/Theme/beaconColors.dart';
 import 'package:beacon/Widgets/pageIndicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,12 +42,20 @@ class OnboardingPage extends StatelessWidget {
           ),
           Text(
             '$title',
-            style: TextStyle(fontSize: 28.0),
+            style: TextStyle(
+              fontSize: 28.0,
+              fontWeight: FontWeight.w900,
+              color: BeaconColors.darkGrey,
+            ),
           ),
           SizedBox(height: 10.0),
           Text(
             '$description',
-            style: TextStyle(fontSize: 16.0),
+            style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.w600,
+              color: BeaconColors.lightGrey,
+            ),
           ),
           SizedBox(
             height: 50.0,
@@ -57,7 +66,11 @@ class OnboardingPage extends StatelessWidget {
               PageIndicator(),
               Text(
                 'SKIP',
-                style: TextStyle(fontSize: 15.0),
+                style: TextStyle(
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w600,
+                  color: BeaconColors.lightGrey.withOpacity(0.5),
+                ),
               ),
             ],
           ),
