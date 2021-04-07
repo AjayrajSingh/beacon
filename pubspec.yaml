@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get:
   flare_splash_screen: ^2.0.1+2
+  google_fonts: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +53,9 @@ flutter:
     - assets/images/lead.png
     - assets/images/follow.png
     - assets/images/enjoy.png
+    - assets/images/mailIcon.png
+    - assets/images/googleIcon.png
+    - assets/images/logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
