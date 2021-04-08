@@ -1,3 +1,5 @@
+import 'package:beacon/Screens/homeScreen.dart';
+import 'package:beacon/Services/authServices.dart';
 import 'package:beacon/Theme/beaconColors.dart';
 import 'package:beacon/Theme/beaconConstants.dart';
 import 'package:beacon/Widgets/outlinedImageButton.dart';
@@ -5,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SigninPage extends StatelessWidget {
+  AuthServices _authServices = AuthServices();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,12 +36,26 @@ class SigninPage extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      'SKIP',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.w600,
-                        color: BeaconColors.lightGrey,
+                    GestureDetector(
+                      onTap: () {
+                        _authServices.signinAnonymously();
+                        if (_authServices.isSignedIn) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeScreen(),
+                            ),
+                          );
+                        }
+                        ;
+                      },
+                      child: Text(
+                        'SKIP',
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          color: BeaconColors.lightGrey,
+                        ),
                       ),
                     ),
                   ],
