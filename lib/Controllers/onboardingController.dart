@@ -14,7 +14,6 @@ class OnboardingContoller extends GetxController {
         currentSliderPage.value = next;
       }
     });
-    print('Chnaged Page to: ${currentSliderPage.value}');
     super.onInit();
   }
 }
